@@ -1,0 +1,30 @@
+{
+	"name": "@ukrainian-cloud/utils",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "./build.sh",
+		"lint:eslint": "eslint **/*.{js,jsx,ts,tsx}",
+		"lint:eslint:fix": "yarn lint:eslint --fix",
+		"lint:prettier": "prettier **/*.{json,yml,yaml,css,scss,sass}",
+		"lint:prettier:fix": "yarn lint:prettier --write",
+		"lint": "concurrently -n eslint,prettier \"yarn lint:eslint${LINT_FIX}\" \"yarn lint:prettier${LINT_FIX}\"",
+		"lint:fix": "LINT_FIX=':fix' yarn lint"
+	},
+	"devDependencies": {
+		"@types/node": "^20.2.1",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.59.1",
+		"concurrently": "^8.0.1",
+		"eslint": "^8.39.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.8",
+		"tsup": "^6.7.0",
+		"typescript": "^5.0.4"
+	},
+	"installConfig": {
+		"pnp": true
+	},
+	"packageManager": "yarn@3.5.0"
+}
