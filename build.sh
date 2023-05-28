@@ -50,7 +50,10 @@ read -r -d '' package_json_text <<EOF
 	"main": "index.cjs",
 	"module": "index.js",
 	"description": "Shared extendable utils for Ukrainian.Cloud client",
-	"repository": "github:ukrainian-cloud/client-utils-shared"
+	"repository": "github:ukrainian-cloud/client-utils-shared",
+	"peerDependencies": {
+		"preact": "^10.13.0",
+	}
 }
 EOF
 license_text="$(cat LICENSE)"
