@@ -52,7 +52,7 @@ read -r -d '' package_json_text <<EOF
 	"description": "Shared extendable utils for Ukrainian.Cloud client",
 	"repository": "github:ukrainian-cloud/client-utils-shared",
 	"peerDependencies": {
-		"preact": "^10.13.0",
+		"preact": "^10.13.0"
 	}
 }
 EOF
