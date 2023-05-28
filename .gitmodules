@@ -1,3 +1,3 @@
 [submodule "config"]
 	path = config
-	url = ssh://github.com/ukrainian-cloud/config
+	url = https://github.com/ukrainian-cloud/config
