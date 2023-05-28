@@ -1,4 +1,5 @@
 import { Initializable } from "../@initializable";
+import { Name } from "../helpers/name";
 
 enum Theme {
 	dark = "dark",
@@ -9,6 +10,7 @@ interface Mappings {
 	theme: Theme;
 }
 
+@Name('LocalDB')
 export abstract class LocalDB extends Initializable {
 	private changeListeners: Record<string, Set<(value: any) => void>> = {};
 	private options: Record<string, WeakMap<(value: any) => void, { once?: boolean }>> = {};
