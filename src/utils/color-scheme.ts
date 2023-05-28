@@ -1,13 +1,11 @@
 import { Initializable } from '../@initializable';
 import { getUtility } from '../@utility';
 import { Name } from '../helpers/name';
-import { LocalDB } from './local-db';
-
-type Theme = LocalDB['enums']['Theme'][keyof LocalDB['enums']['Theme']];
+import { LocalDB, LocalDBEnum } from './local-db';
 
 @Name('ColorScheme')
 export abstract class ColorScheme extends Initializable {
-	abstract getDefault(): Promise<Theme>;
+	abstract getDefault(): Promise<LocalDBEnum<'Theme'>>;
 
 	async init() {
 		const db = await getUtility(LocalDB);

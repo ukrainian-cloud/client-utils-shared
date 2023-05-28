@@ -10,14 +10,18 @@ interface Mappings {
 	theme: Theme;
 }
 
+const enums = {
+	Theme,
+};
+
+export type LocalDBEnum<T extends keyof typeof enums> = LocalDB['enums'][T][keyof LocalDB['enums'][T]];
+
 @Name('LocalDB')
 export abstract class LocalDB extends Initializable {
 	private changeListeners: Record<string, Set<(value: any) => void>> = {};
 	private options: Record<string, WeakMap<(value: any) => void, { once?: boolean }>> = {};
 
-	enums = {
-		Theme,
-	};
+	enums = enums;
 
 	abstract get<T extends keyof Mappings>(name: T): Promise<Mappings[T]>;
 
