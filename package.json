@@ -1,0 +1,11 @@
+{
+	"name": "@ukrainian-cloud/utils",
+	"version": "0.0.4",
+	"main": "index.cjs",
+	"module": "index.js",
+	"description": "Shared extendable utils for Ukrainian.Cloud client",
+	"repository": "github:ukrainian-cloud/client-utils-shared",
+	"peerDependencies": {
+		"preact": "^10.13.0"
+	}
+}
